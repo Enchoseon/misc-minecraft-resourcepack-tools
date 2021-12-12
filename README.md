@@ -31,7 +31,7 @@ Assorted tools to help with creating some types of Minecraft resourcepacks.
 
 # Player-to-Totem
 
-**Instructrions:**
+**Instructions:**
 1. `node player-to-totem.js`
 2. Enter playername.
 3. Enter a version between 1 & 8. (See: *Version cheat sheet* below for more info.)
