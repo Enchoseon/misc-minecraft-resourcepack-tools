@@ -36,9 +36,8 @@ prompt.get([{
 
 function assembleTotem(playername, version) {
 	// Create temp file
-	var tempFile = os.tmpdir() + "/player-to-totem/";
-	fs.mkdirSync(tempFile, {recursive: true});
-	tempFile += playername + ".png";
+	var tempPath = os.tmpdir() + "/player-to-totem/" + playername + "/";
+	fs.mkdirSync(tempPath, {recursive: true});
 	
 	// Initialize path variables
 	util.path.root = "_output/Player-to-Totem/" + playername + " Totem/";
@@ -48,18 +47,18 @@ function assembleTotem(playername, version) {
 	util.createStructure(version, "Totem of " + playername + ".");
 	
 	// Get skin data
+	const tempFile = tempPath + "64.png";
 	download.image({
 		url: "https://minotar.net/body/" + playername + "/" + "64.png",
-		dest: tempFile
+		dest: tempPath
 	}).then((data) => {
 		// Write images to resource packs
-		const file = tempFile;
 		const options = {
 			kernel: sharp.kernel.nearest,
 			fit: "contain"
 		}
-		util.processImage(file, 32, options, util.path.full + "/totem.png");
-		util.processImage(file, 32, options, util.path.full + "/totem_of_undying.png");
-		util.processImage(file, 64, options, util.path.root + "pack.png");
+		util.processImage(tempFile, 32, options, util.path.full + "/totem.png");
+		util.processImage(tempFile, 32, options, util.path.full + "/totem_of_undying.png");
+		util.processImage(tempFile, 64, options, util.path.root + "pack.png");
 	});
 }
