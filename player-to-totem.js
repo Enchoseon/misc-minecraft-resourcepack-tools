@@ -51,7 +51,7 @@ function assembleTotem(playername, version) {
 	download.image({
 		url: "https://minotar.net/body/" + playername + "/" + "64.png",
 		dest: tempPath
-	}).then((data) => {
+	}).then(() => {
 		// Write images to resource packs
 		const options = {
 			kernel: sharp.kernel.nearest,
