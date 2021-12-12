@@ -49,3 +49,7 @@ Assorted tools to help with creating some types of Minecraft resourcepacks.
 | 6            | 1.16.2 – 1.16.5   |
 | 7            | 1.17.x            |
 | 8            | 1.18.x            |
+
+# It's That Simple!
+
+![example](./example/example.gif)
