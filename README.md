@@ -52,4 +52,4 @@ Assorted tools to help with creating some types of Minecraft resourcepacks.
 
 # It's That Simple!
 
-![example](./example/example.gif)
+![example](https://enchoseon.com/assets/example.gif)
