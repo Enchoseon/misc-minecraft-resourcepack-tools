@@ -23,6 +23,7 @@ prompt.get([{
 		required: true
 	}, {
 		name: "version",
+		type: "integer",
 		message: "Pack Version",
 		required: true
 	}], function (err, result) {
