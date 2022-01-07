@@ -50,7 +50,7 @@ function assembleTotem(playername, version) {
 	// Get skin data
 	const tempFile = tempPath + "64.png";
 	download.image({
-		url: "https://minotar.net/body/" + playername + "/" + "64.png",
+		url: "https://minotar.net/armor/body/" + playername + "/" + "64.png",
 		dest: tempPath
 	}).then(() => {
 		// Write images to resource packs
